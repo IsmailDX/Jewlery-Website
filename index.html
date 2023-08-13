@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mangata and Gallo</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="author" content="Mangata and Gallo">
+        <meta property="og:title" content="Our Menu">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.MangataandGallo">
+        <meta property="og:description" content="Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries. The jewelry company primarily operates online and has a small storefront in Austin, Texas with an atelier attached for browsing. Mangata & Gallo's selection of jewelry is known for its high-quality and classic look. The owner, an Austin local, is well known for her jewelry designs.  ">
+        <meta property="og:image" content="/assets/Asset1.png">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:sitename" content="Mangata and Gallo">
+
+        <link rel="icon" href="/assets/diamond.ico">
+        <link rel="icon" href="/assets/diamond.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Jewelry Collections</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact</a></li>
+        </div>
+        <header>
+            <div class="logo">
+            <img src="assets/Asset2.png">
+            </div>   
+        </header>
+        <nav>
+           <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Jewelry Collections</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact</a></li>
+           </ul>
+        </nav>
+        <main>
+            <section> 
+                <article id="firstSection">
+                    <div class="image-container">
+                        <img src="assets/picture1.jpg">
+                    </div>
+                    <div class="content">
+                        <h1>Welcome to Mangata and Gallo</h1>
+                        <p>We specialize in crafting exquisite jewelry to capture life's most cherished moments. From engagements to weddings and anniversaries, our designs evoke the essence of these significant milestones. Our Austin-based storefront is more than a jewelry store; it's a reflection of passion, creativity, and timeless elegance. Led by Mariana, our owner and lead designer, our pieces seamlessly blend artistry and craftsmanship. Discover our collections, each piece a love-infused masterpiece, whether online or in-store. Join us on this journey of creating enduring treasures that encapsulate life's beauty.</p>
+                    </div>
+                </article>
+        </section>
+        <section>
+            <article>
+                <h2>Our Artisans</h2>
+                <div class="image-container2">
+                <img src="assets/artisans.jpg">
+                </div>
+                <p>Behind every piece of Mangata and Gallo jewelry is a team of skilled artisans who share Mariana's dedication to excellence. With years of experience and a passion for their craft, our artisans bring her designs to life, ensuring every detail is perfected.</p>
+            </article>
+            <article>
+                <h2>The Collection</h2>
+                <div class="image-container2"> 
+                <img src="assets/collection.jpg">
+                </div>
+                <p>Our jewelry collection is a celebration of classic elegance and modern sophistication. Each piece is carefully curated to embody the spirit of Mangata and Gallo. From timeless diamond rings to intricate necklaces, our collection offers a range of choices for every special occasion.</p>
+            </article>
+            <article>
+                <h2>Stay Connected</h2>
+                <div class="image-container2">
+                <img src="assets/connected.webp">
+                </div>
+                <p>Join our community of jewelry enthusiasts and stay updated with the latest from Mangata and Gallo. Follow us on social media to get a glimpse of our behind-the-scenes creative process, learn about upcoming collections, and connect with fellow jewelry lovers.</p>
+            </article>
+        </section>    
+        </main>
+        <footer>
+            <div>
+                <img src="assets/Asset1.png"></img>
+            </div>
+            <div>
+                <p>Copyright Mangata and Gallo</p>
+            </div>
+        </footer>
+        <script>
+            const togglebtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            togglebtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    </body>
+</html>

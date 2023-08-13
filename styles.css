@@ -1,0 +1,279 @@
+body {
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-image: url('assets/wallpaper.webp');
+    background-size: cover; /* Adjust to your needs */
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+header .logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    padding-bottom: 2rem;
+}
+
+.toggle_btn {
+    display: none;
+}
+
+/* First section */
+
+#firstSection {
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.content {
+    position: relative;
+    z-index: 1; 
+    padding-left:1rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+/* Navbar */
+
+nav {
+    background-color: black;
+    border-radius: 1rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+ul > li {
+    display: inline-block;
+    padding: 0 2rem; 
+}
+
+a {
+    font-size: 1.3rem;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+  
+a:hover {
+    text-decoration: none;
+    color: gainsboro;
+}
+  
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+/* Second Section */
+
+section {
+    display: flex;
+}
+
+article {
+    flex: 1;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-6px);  
+    }
+}
+
+article:not(#firstSection){
+    background-color: rgba(17, 17, 17, 0.6);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+article:not(#firstSection):hover{
+    background-color: rgb(0, 0, 0);
+    animation: move 0.3s forwards;  
+}
+
+div img {
+    width: 5rem;
+}
+
+.image-container2 {
+    width: 100%;
+    height: 10rem;  
+    overflow: hidden;  
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer styles */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+footer div {
+    display: flex;
+}
+
+/* Logo styles */
+
+footer div:first-child {
+    flex: none;  
+    margin-right: auto;  
+}
+
+ 
+footer div:last-child {
+    flex: none;  
+    margin-left: auto;  
+    text-align: right;  
+}
+
+/* dropdown menu */
+
+.dropdown_menu {
+    display: none;
+    list-style: none;
+    position: fixed;
+    right: 1rem;
+    height: 0;
+    top: 70px;
+    width: 230px;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
+    backdrop-filter: blur(10px)
+}
+
+.dropdown_menu.open {
+    height: 190px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive styles */
+
+@media(max-width: 951px) {
+    
+    nav .links, nav {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1.3rem;
+    }
+
+    header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+    }
+
+    header .logo img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;  
+        padding: 0;  
+    }
+
+    .toggle_btn {
+        display: block;
+        position: fixed;
+        top: 1rem;  
+        right: 1rem;  
+        background-color: aliceblue;
+        padding: 0.3rem;
+        font-size: 1.7rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 0.6rem;
+        z-index: 999; /* Ensure it's above other content */
+    }
+
+    .dropdown_menu {
+    display: block;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    article {
+        flex: 1;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+}
+
+
+
+
+
+
